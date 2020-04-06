@@ -1,13 +1,16 @@
-def find_min_in_nested_arrays(src)
-    min = array[0][0]
-    newArray =[]
-    array.each do element
-      element.each do inner_element
-        if inner_element < min
-          min = inner_element
-        end
+def find_min_in_nested_arrays(array)
+  newArray =[]
+  array.each do |inner_array|
+    min = inner_array[0]
+    inner_array.each do |inner_element|
+  
+      if inner_element < min
+        min = inner_element
+        
       end
-      newArray.push(min)
     end
-    return newArray
+    newArray.push(min)
   end
+  return newArray
+end
+
